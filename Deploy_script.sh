@@ -21,13 +21,13 @@ mkdir ~/Backup-$BACKUPTIME
 echo "Taking backup of current built"
 countdown 5 "for backup to complete "
 cp -r $SOURCEFOLDER/hft $SOURCEFOLDER/dms $SOURCEFOLDER/genConfirmations  $SOURCEFOLDER/librms.so ~/Backup-$BACKUPTIME/
-echo "backup completed"
 
+echo "taking postgresql backup"
 export PGPASSWORD="$PASSWORD"
 pg_dump -F t -h $HOSTNAME -U $USERNAME $DATABASE > $(date +%Y-%m-%d).sql
 #pg_dump -U $USERNAME $DATABASE > ~/Backup-$BACKUPTIME/dump-$BACKUPTIME.sql
 unset PGPASSWORD
-
+echo "backup completed"
 echo "Deployment starting"
 sleep 2
 echo "Deployment in progress"
