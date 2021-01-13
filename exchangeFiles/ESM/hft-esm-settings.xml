@@ -1,0 +1,55 @@
+<?xml version='1.0' encoding='ISO-8859-1'?>
+<fix8>
+  <default role="initiator"
+    fix_version="4200"
+    ip="10.0.0.40"
+    tcp_recv_buffer="100663296"
+    tcp_send_buffer="100663296"
+    target_comp_id="ESMNSE"
+    reset_sequence_numbers="false"
+    ignore_logon_sequence_check="false"
+    session_log="session_log_file"
+    protocol_log="protocol_log_file"
+    login_retry_interval="3"
+    connect_timeout="3"
+    default_appl_ver_id="9"
+    heartbeat_interval="60"
+    tcp_nodelay="true"
+    tcp_reuseaddr="true"
+    always_seqnum_assign="false"
+    process_model="threaded"
+    enforce_compids="true"
+    login_retries="50000"
+    tabsize="3"
+    persist="persistence_logs" />
+
+  <session name="SESSION-1"
+    sender_comp_id="dev"
+    port="16834"
+    active="true" 
+    cancel_on_disconnect="Y"
+    DealersAllowed="11,777,779"/>
+ 
+  <persist name="persistence_logs"
+    type="file" 
+    dir="./logs/persistLogs"
+    delimiter="[]"
+    rotation="5"
+    use_session_id="true"/>
+
+  <log name="session_log_file"
+    type="session"
+    filename="./logs/fixLogs/session"
+    rotation="5"
+    delimiter="[]"
+    levels="debug|info|warn|error|fatal"
+    flags="mstart|sequence|thread|timestamp|level"/>
+
+  <log name="protocol_log_file"
+    type="protocol"
+    filename="./logs/fixLogs/protocol"
+    rotation="5"
+    delimiter="[]"
+    flags="sequence|append|direction|inbound|outbound"/>
+
+</fix8>

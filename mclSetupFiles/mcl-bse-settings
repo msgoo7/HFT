@@ -1,0 +1,14 @@
+[BSECM]
+udp_port=45554
+
+[BSEFO]
+udp_port=45556
+
+[BSECDS]
+udp_port=45557
+
+[BSECOM]
+udp_port=45558
+
+[BSEINX]
+udp_port=45559

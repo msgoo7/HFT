@@ -1,0 +1,40 @@
+# default settings for sessions
+[DEFAULT]
+SocketAcceptPort=75012
+SenderCompID=ADWMDFIX
+FileStorePath=./logs/
+FileLogPath=./logs/
+ResetOnLogon=N
+ValidateUserDefinedFields=N
+ValidateFieldsOutOfOrder=N
+TargetSubID=UTRADEDTS2
+ScreenLogShowOutgoing=Y
+ScreenLogShowIncoming=N
+ScreenLogShowHeartBeats=N
+CheckLatency=N
+
+[SESSION]
+SocketAcceptPort=75012
+SenderCompID=ADWMDFIX
+FileStorePath=./logs/
+FileLogPath=./logs/
+ResetOnLogon=N
+ValidateUserDefinedFields=N
+#SenderCompID=UTRADEDTS2
+TargetSubID=UTRADEDTS2
+ConnectionType=initiator
+MarketDestination=BANK4P
+BeginString=FIX.4.2
+TargetCompID=BANK4P
+StartTime=00:00:01
+EndTime=23:59:59
+ReconnectInterval=30
+HeartBtInt=60
+SocketConnectPort=16257
+SocketConnectHost=127.0.0.1
+#FIX42_TT_FIX.xml is TT FIX Api
+DataDictionary=FIX42_TT_FIX.xml
+#FIX42_TT.xml is for TT 7.x
+#DataDictionary=FIX42_TT.xml
+ResetOnLogout=N
+ResetOnLogon=N

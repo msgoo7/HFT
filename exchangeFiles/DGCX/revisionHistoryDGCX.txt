@@ -1,0 +1,30 @@
+======= Revision History  ==================================
+
+Ver 2.2.0-A Jul, 2014
+
+>>>>>> 16 feb,2018  FIX50SP2.xml Tags Updated 
+
+Ver 3.2.2-A May, 2017.
+
+DGCX MassQuote, MassQuoteAcknowledgement, and QuoteCancel are removed.
+ExecutionReports for trades in combination instruments now contain leg trade information as well.
+Data type for the Tags Order ID’s and Trade ID’s is replaced by Long from existing String OrderID (37) TrdMatchID (880).
+TAG BusinessDay (75) added in SecurityStatus.
+TAG EffectiveBusinessDate (2400) added in in MarketDefinition.
+TAG LegTradingProtectionLimit (25004) added in
+InstrumentLeg & Execution Report.
+TAG LegID (1788) added in InstrumentLeg.
+TAG NoLeg (555) added in Execution Report
+TAG LegSymbol (600) added in Execution Report.
+TAG LegSecurityID (602) added in Execution Report.
+TAG LegSecurityIdSource (603) added in Execution Report.
+TAG LegSide (624) added in Execution Report.
+TAG LegCurrency (556) added in Execution Report.
+TAG LegOrderQty (685) added in Execution Report.
+TAG LegLastPx (637) added in Execution Report.
+
+Ver 3.5.0-A Jan, 2018 
+
+DGCX Removing possible values for BusinessRejectReason
+
+

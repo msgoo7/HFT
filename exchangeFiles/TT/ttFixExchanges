@@ -1,0 +1,16 @@
+[EXCHANGES_ECL]
+TT_SGX_Enabled=1
+
+[EXCHANGES_MCL]
+TT_SGX_Enabled=0
+
+[TT_ECL_SGX]
+cancelOnDisconnect=0
+throttleLimit=60
+throttleTimeInterval=1
+
+[TT_MCL_SGX]
+downloadFutureScripMaster=0
+downloadOptionsScripMaster=0
+downloadSpreadScripMaster=0
+

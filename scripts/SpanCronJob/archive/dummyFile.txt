@@ -1,0 +1,1 @@
+Archive the previous spanfile when the spanCronJob start

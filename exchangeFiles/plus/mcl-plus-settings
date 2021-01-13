@@ -1,0 +1,27 @@
+# default settings for sessions
+[DEFAULT]
+FileStorePath=logs/fixlogs/
+FileLogPath=logs/fixlogs/
+#ScreenLogEvents=N
+#ScreenLogShowIncoming=N
+#ScreenLogShowOutgoing=N
+#ScreenLogShowHeartBeats=N
+ValidateUserDefinedFields=N
+ResetOnLogon=Y
+
+[SESSION]
+ConnectionType=initiator
+SenderCompID=T-UTRADE8M
+TargetCompID=T-GMEX
+MarketDestination=PLUS
+BeginString=FIX.4.4
+StartTime=00:00:01
+EndTime=23:59:59
+ReconnectInterval=30
+HeartBtInt=30
+SocketConnectPort=26107
+SocketConnectHost=10.186.182.227
+ResetOnLogon=Y
+DataDictionary=FIX44_MCL.xml
+CheckLatency=N
+

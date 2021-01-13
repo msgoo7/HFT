@@ -1,0 +1,2 @@
+0|Request Rejected: Not allowed in Special Session
+0|The market is currently not open for trading.

@@ -1,0 +1,44 @@
+#default settings for sessions
+[DEFAULT]
+ConnectionType=initiator
+BeginString=FIX.4.2
+FileStorePath=./logs/
+FileLogPath=./logs/
+ScreenLogShowIncoming=Y
+ScreenLogShowOutgoing=Y
+ScreenLogShowHeartBeats=Y
+SocketConnectPort=16256
+SocketConnectHost=127.0.0.1
+StartTime=00:00:01
+EndTime=23:59:59
+ValidateUserDefinedFields=N
+ResetOnLogout=Y
+ResetOnLogon=Y
+CheckLatency=N
+ReconnectInterval=5
+HeartBtInt=30
+#FIX42_TT.xml is for TT 7.x
+#DataDictionary=FIX42_TT.xml
+#FIX42_TT_FIX.xml is TT FIX Api
+DataDictionary=FIX42_TT_FIX.xml
+
+[SESSION]
+Account=PTG858ADUAT
+SenderCompID=ADWORFIX
+TargetCompID=BANK4O
+Password=Welcome123
+DealerIdsAllowed=111,777
+
+[xxSESSION]
+Account=UTRADEDTS
+SenderCompID=UTRADEDTS
+TargetCompID=BANK4O
+Password=12345678
+DealerIdsAllowed=111,777
+
+[xSESSION]
+Account=UTRADEDTS3
+SenderCompID=UTRADEDTS3
+TargetCompID=BANK4O
+Password=12345678
+DealerIdsAllowed=111,777

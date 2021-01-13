@@ -1,0 +1,85 @@
+<?xml version='1.0'?>
+
+<default 
+  active_partitions="partition-1,partition-2"
+  update_scrip_master="false"
+  max_depth_level="2"
+  />
+
+<partition-1>
+  <itch>
+    <primary 
+      enable="true"
+      multicast_ip="239.178.1.1"
+      multicast_port="21001"
+      interface_ip="10.42.97.169"
+      />
+    <secondary
+      multicast_ip="239.178.1.1"
+      multicast_port="21101"
+      interface_ip="10.42.97.169"
+      />
+  </itch>
+  <rewinder>
+    <primary
+      request_server_ip="10.42.100.79"
+      request_server_port="24001"
+      />
+    <secondary
+      request_server_ip="10.42.100.111"
+      request_server_port="24002"
+      />
+  </rewinder>
+  <glimpse
+    server_ip="10.42.100.79"
+    server_port="21801"
+    username="GLSM01">
+    <password-manager
+      password="passwd"
+      />
+  </glimpse>
+  <basic
+    heartbeat_interval="7"
+    partition_id="1"
+    seq_num_file_path="logs/exchangeLogs/sgx/"
+    />
+</partition-1>
+
+<partition-2>
+  <itch>
+    <primary 
+      enable="true"
+      multicast_ip="239.178.1.2"
+      multicast_port="21002"
+      interface_ip="10.42.97.169"
+      />
+    <secondary
+      multicast_ip="239.178.1.2"
+      multicast_port="21102"
+      interface_ip="10.42.97.169"
+      />
+  </itch>
+  <rewinder>
+    <primary
+      request_server_ip="10.42.100.79"
+      request_server_port="24001"
+      />
+    <secondary
+      request_server_ip="10.42.100.111"
+      request_server_port="24002"
+      />
+  </rewinder>
+  <glimpse
+    server_ip="10.42.100.79"
+    server_port="21802"
+    username="GLSM02">
+    <password-manager
+      password="passwd"
+      />
+  </glimpse>
+  <basic
+    heartbeat_interval="7"
+    partition_id="2"
+    seq_num_file_path="logs/exchangeLogs/sgx/"
+    />
+</partition-2>

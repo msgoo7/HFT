@@ -1,0 +1,7 @@
+Copy these to folder containing hft
+restartServer.sh ----- to start / restart server (old records will be archived)
+intradayRestartServer.sh ------- to restart server during market hours ( records will not be cleared and sequences will be continued)
+stopServer.sh --------- to stop hft
+displayHftLog.sh -------- to display current backend console output
+latestStrategyLog.sh ---------- display log of latest strategy ( can be useful if running only one strategy )
+genConfirmationsCSV.sh ----------- converts the order confirmations to csv format (csv file is saved in the current folder with time stamp)

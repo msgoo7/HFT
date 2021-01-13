@@ -1,0 +1,24 @@
+DELETE FROM ${refmaster}.global_rms_setting_combination;
+
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(0, 'Client Code');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(1, 'Client Code + Symbol');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(2, 'Client Code + Underlying');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(3, 'Client Code + Product');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(4, 'Client Code + Product + Symbol');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(5, 'Client Code + Product + Symbol Basket');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(6, 'Client Code + Symbol Basket');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(7, 'Dealer');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(8, 'Dealer + Symbol');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(9, 'Dealer + Underlying');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(10, 'Group');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(11, 'Group + Symbol');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(12, 'Group + Underlying');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(13, 'Branch');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(14, 'Brance + Symbol');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(15, 'Product');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(16, 'Product + Symbol');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(17, 'Product + Symbol Basket');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(18, 'Symbol Basket');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(19, 'Symbol');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(20, 'Underlying');
+INSERT INTO ${refmaster}.global_rms_setting_combination  values(21, 'Infra Checks');

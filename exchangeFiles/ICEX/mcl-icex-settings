@@ -1,0 +1,17 @@
+[ICEX-1]
+primary_interface_ip=192.168.102.234
+primary_multicast_group=239.100.120.201
+primary_multicast_port=19540
+primary_template_file=FastGWMsgConfig.xml
+primary_snapshot_ip=172.24.24.207
+primary_snapshot_port=19521
+primary_snapshot_template_file=FastGWMsgConfig.xml
+primary_replay_ip=172.24.24.207
+primary_replay_port=19520
+primary_replay_template_file=FastGWMsgConfig.xml
+comp_id=1010.003
+password=172Tue09
+new_password=27@Fri57
+change_password=false
+retry_count=1
+download_securities=0

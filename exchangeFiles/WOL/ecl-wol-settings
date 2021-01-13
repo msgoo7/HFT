@@ -1,0 +1,15 @@
+[DEFAULT]
+retry_interval=30
+retry_count=3
+enable_time_dump=0
+end_time=23:59:59
+gateway_ip=
+gateway_port=
+
+[40565]
+senderSubID=
+targetCompID=
+targetSubID=
+strategy_id
+heartbeat_interval=30
+interface_ip=

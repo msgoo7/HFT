@@ -1,0 +1,56 @@
+
+Cron
+
+Cron allows Linux and Unix users to run commands or scripts at a given date and time. You can schedule scripts to be executed periodically. Cron is one of the most useful tool in a Linux or UNIX like operating systems.The cron service (daemon) runs in the background and constantly checks the /etc/crontab file, and /etc/cron.*/ directories. It also checks the /var/spool/cron/ directory.
+
+
+crontab command
+
+ crontab command is used to edit/create, install, deinstall or list the cron jobs in Vixie Cron. 
+ Each user can have their own crontab file, and though these are files in /var/spool/cron/crontabs, 
+ they are not intended to be edited directly. We need to use crontab command for editing or setting up our own cron jobs.
+
+
+Parts of a cron command
+
+There are four main parts to a cron command.
+
+Timing 		Execute PHP 	     Path to script 							Output
+
+* * * * * 	/usr/bin/python 	/var/www/html/crontest/cron.sh  	>    /dev/null 2>&1
+
+    Timing – set the minutes, hours, days, months, and weekday settings (more below).
+    Execute – the cron job needs to call upon PHP to run, which is located at /usr/bin/php.
+    Path to script – the full path of the file you plan to run.
+    Output – (optional) you can write the output to a file or discard it – > /dev/null 2>&1 will discard.
+
+In the above example, the cron job is set to send every minute – or more specifically, 
+every minute of every hour of every day of every month, every day of the week. An asterisk is a wildcard that stands for “all”.
+
+    Minutes – set the minutes, from 0-59
+    Hours – set the hour, from 0-24
+    Days – set the day, from 1-31
+    Months – set the month, from 1-12 (January – December)
+    Week – set the day of the week, from 0-6 (Sunday – Saturday)
+
+Here are a few basic examples to get an idea of how it works.
+
+Syntax 	Explanation
+0 * * * * 	run once an hour (every hour at minute zero)
+0 0 * * * 	run once a day (every day at midnight and minute zero)
+0 0 1 * * 	run once a month (on the first day of every month at midnight and minute zero)
+0 0 1 1 * 	run once a year (on the first day of the first month every year at midnight and minute zero)
+
+
+
+List all your cron jobs
+	
+# crontab -l
+# crontab -u username -l
+
+To remove or erase all crontab jobs use the following command:       
+# crontab -r
+
+Delete job for specific user. Must be run as root user ##
+# crontab -r -u username
+
