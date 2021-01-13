@@ -3,17 +3,17 @@
 whoami
 w
 BACKUPTIME=`date +%b-%d-%y`
-SOURCEFOLDER=/data/muTrade-1.0.0-Linux
-#HOSTNAME=
-USERNAME=testuser
-PASSWORD=mypass
-DATABASE=mydb
+SOURCEFOLDER=/release/internal.utradesolutions.com/nidhika.bhardwaj/1.7.0.EMDI
+HOSTNAME=10.0.0.12
+USERNAME=sqpoint
+PASSWORD=testpass
+DATABASE=sqtestdb
 source countdown.sh
 echo "current working dirctory: $PWD"
 
 countdown 10 "for server to stop "
-/data/muTrade-1.0.0-Linux/stopServer.sh
-/data/muTrade-1.0.0-Linux/stopDms.sh
+$SOURCEFOLDER/stopServer.sh
+$SOURCEFOLDER/stopDms.sh
 echo "stopped"
 
 mkdir ~/Backup-$BACKUPTIME
@@ -24,8 +24,8 @@ cp -r $SOURCEFOLDER/hft $SOURCEFOLDER/dms $SOURCEFOLDER/genConfirmations  $SOURC
 echo "backup completed"
 
 export PGPASSWORD="$PASSWORD"
-#pg_dump -F t -h $HOSTNAME -U $USERNAME $DATABASE > $(date +%Y-%m-%d).backup
-pg_dump -U $USERNAME $DATABASE > ~/Backup-$BACKUPTIME/dump-$BACKUPTIME.sql
+pg_dump -F t -h $HOSTNAME -U $USERNAME $DATABASE > $(date +%Y-%m-%d).backup
+#pg_dump -U $USERNAME $DATABASE > ~/Backup-$BACKUPTIME/dump-$BACKUPTIME.sql
 unset PGPASSWORD
 
 echo "Deployment starting"
