@@ -5,8 +5,8 @@ w
 BACKUPTIME=`date +%b-%d-%y`
 SOURCEFOLDER=/release/internal.utradesolutions.com/nidhika.bhardwaj/1.7.0.EMDI
 HOSTNAME=10.0.0.12
-USERNAME=sqpoint
-PASSWORD=testpass
+USERNAME=mutrade
+PASSWORD=mutrade
 DATABASE=sqtestdb
 source countdown.sh
 echo "current working dirctory: $PWD"
