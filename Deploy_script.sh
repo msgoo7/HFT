@@ -47,6 +47,6 @@ echo " deployment succesfull "
 echo "==========================================================================="
 
 echo "Updated Package are: "
-ls -ltr $SOURCEFOLDER | tail -4 "
+ls -ltr $SOURCEFOLDER | tail -4
 sleep 2
 echo "++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++"
