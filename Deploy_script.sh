@@ -3,11 +3,13 @@
 whoami
 w
 BACKUPTIME=`date +%b-%d-%y`
-SOURCEFOLDER=/root/muTrade-1.0.0-Linux-I2-DC
+SOURCEFOLDER=/data/muTrade-1.0.0-Linux
 source countdown.sh
 echo "current working dirctory: $PWD"
 
 countdown 10 "for server to stop "
+/data/muTrade-1.0.0-Linux/stopServer.sh
+/data/muTrade-1.0.0-Linux/stopDms.sh
 echo "stopped"
 
 mkdir ~/Backup-$BACKUPTIME
@@ -18,7 +20,7 @@ cp -r $SOURCEFOLDER/hft $SOURCEFOLDER/dms $SOURCEFOLDER/genConfirmations  $SOURC
 echo "backup completed"
 
 
-pg_dump -U mutrade spoint > ~/Backup-$BACKUPTIME/dump-$BACKUPTIME.sql
+pg_dump -U myuser mydb > ~/Backup-$BACKUPTIME/dump-$BACKUPTIME.sql
 
 echo "Deployment starting"
 sleep 2
