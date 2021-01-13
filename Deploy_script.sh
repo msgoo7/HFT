@@ -4,6 +4,10 @@ whoami
 w
 BACKUPTIME=`date +%b-%d-%y`
 SOURCEFOLDER=/data/muTrade-1.0.0-Linux
+#HOSTNAME=
+USERNAME=testuser
+PASSWORD=mypass
+DATABASE=mydb
 source countdown.sh
 echo "current working dirctory: $PWD"
 
@@ -19,8 +23,10 @@ countdown 5 "for backup to complete "
 cp -r $SOURCEFOLDER/hft $SOURCEFOLDER/dms $SOURCEFOLDER/genConfirmations  $SOURCEFOLDER/librms.so ~/Backup-$BACKUPTIME/
 echo "backup completed"
 
-
-pg_dump -U myuser mydb > ~/Backup-$BACKUPTIME/dump-$BACKUPTIME.sql
+export PGPASSWORD="$PASSWORD"
+#pg_dump -F t -h $HOSTNAME -U $USERNAME $DATABASE > $(date +%Y-%m-%d).backup
+pg_dump -U $USERNAME $DATABASE > ~/Backup-$BACKUPTIME/dump-$BACKUPTIME.sql
+unset PGPASSWORD
 
 echo "Deployment starting"
 sleep 2
